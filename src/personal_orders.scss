@@ -1,0 +1,306 @@
+@import '/src/elements.scss';
+
+.disactive {
+    background-color: #F4F4F4;
+    color: $primary-color;
+}
+
+
+.line {
+    margin-bottom: 30px;
+    @include mobile {
+        margin-bottom: 0px;
+    }
+    @include tablet {
+        margin-bottom: 80px;
+    }
+    @include desktop {
+        margin-bottom: 100px;
+    }
+}
+
+.personal-orders__wrapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 60px;
+    @include mobile {
+        width: 600px;
+        margin-bottom: 300px;
+    }
+    @include tablet {
+        width: 960px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "cabinet_menu column_menu";
+        align-items: start;
+        grid-gap: 7.5%;
+        margin-bottom: 80px;
+    }
+    @include desktop {
+        width: 1200px;
+        margin-bottom: 100px;
+    }
+}
+
+.cabinet-menu {
+    display: flex;
+    flex-direction: column;
+    grid-area: cabinet_menu;
+    @include mobile {
+        flex-direction: row;
+    }
+    @include tablet {
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    .btn {
+        width: 300px;
+        height: 40px;
+        text-transform: capitalize;
+        margin-bottom: 6px;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:first-child {
+            .btn__link {
+                color: $primary-color;
+            }
+        }
+        @include mobile {
+            width: 150px;
+            height: 60px;
+            margin-bottom: 0;
+        }
+        @include tablet {
+            width: 446px;
+            height: 70px;
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @include desktop {
+            width: 480px;
+            height: 75px;
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.column-wrapp {
+    width: 300px;
+    grid-area: column_menu;
+    @include mobile {
+        width: 446px;
+        align-self: flex-start;
+    }
+    @include desktop {
+        width: 600px;
+    }
+}
+.information-wrapp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    .information-wrapp__title {
+        font-family: CormorantMedium;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 80%;
+        letter-spacing: 0.02em;
+        color: $primary-color;
+        margin: 0;
+        margin-top: 50px;
+        align-self: flex-start;
+        @include mobile {
+            margin-top: 60px;
+        }
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+    .text--main {
+        font-size: 14px;
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+    .information-wrapp__text {
+        color: $primary-color;
+        width: 300px;
+        margin: 0;
+        margin-top: 30px;
+        @include mobile {
+            width: 445px;
+            margin: 0;
+            margin-top: 30px;
+        }
+        @include tablet {
+            margin-top: 40px;
+        }
+        @include desktop {
+            width: 600px;
+            height: 64px;
+        }
+        .back-shop__link {
+            color: $primary-color;
+        }
+    }
+    .information-wrapp__text:last-child {
+        margin-top: 10px;
+    }
+}
+.wrapper-await {
+    margin-top: 50px;
+    @include mobile {
+        margin-top: 60px;
+    }
+    @include tablet {
+        margin-top: 0;
+    }
+    .wrapper-await__title {
+        width: 179px;
+        padding-bottom: 40px;
+        margin: 0;
+    }
+}
+.wrapper-await__grid-wrapp {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    p, h5 {
+        margin: 0;
+    }
+    h5 {
+        font-family: NunitoRegular;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 133%;
+        letter-spacing: 2%;
+        color: $primary-color;
+        text-transform: uppercase;
+        padding-bottom: 33px;
+    }
+    p {
+        font-family: NunitoRegular;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 133%;
+        letter-spacing: 2%;
+        color: $primary-color;
+        padding-bottom: 33px;
+    }
+    @include mobile {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    grid-template-areas: 
+    "topLine topLine"
+    "order order"
+    "date date"
+    "price price"
+    "status status"
+    "bottomLine bottomLine";
+    .wrapper-await--order {
+        grid-area: order;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .wrapper-await--date {
+        grid-area: date;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding-left: 20px;
+        @include mobile {
+            padding-left: 0;
+        }
+    }
+    .wrapper-await--price {
+        grid-area: price;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding-left: 55px;
+        @include mobile {
+            padding-left: 0;
+        }
+    }
+    .wrapper-await--status {
+        grid-area: status;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        @include mobile {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        };
+        .wrapper-await--status__title {
+            display: none;
+            @include mobile {
+                display: block;
+            }
+        }
+        .wrapper-await--status__stat {
+            border: none;
+            padding-bottom: 0;
+            font-family: NunitoRegular;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+            text-transform: capitalize;
+            background-color: rgba($color:  #EDDB38, $alpha: 0.3);
+            color: #807C32;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            @include mobile {
+                margin-bottom: 29px;
+            }
+        }
+    }
+    .line--top {
+        grid-area: topLine;
+        position: absolute;
+        top: 25px;
+    }
+    .line--bottom {
+        grid-area: bottomLine;
+        position: absolute;
+        bottom: 42px;
+        @include mobile {
+            bottom: 12px;
+        }
+    }
+    .line {
+        opacity: 0.4;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        @include mobile {
+            grid-column-end: 5;
+        }
+        margin: 0;
+    }
+}

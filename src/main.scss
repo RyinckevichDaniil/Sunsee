@@ -1,0 +1,42 @@
+@import '/src/fonts.css';
+@import './../node_modules/normalize.css/normalize.css';
+@import '/src/header.scss';
+@import '/src/elements.scss';
+@import '/src/footer.scss';
+@import '/src/modal.scss';
+
+
+.wrapp { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    margin: 0;
+    @include desktop {
+        max-width: 100%;
+    }
+    .main_wrapper {
+        align-self: center;
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 9px;
+        @include mobile {
+            max-width: 600px;
+            margin-top: 26px;
+        }
+        @include tablet {
+            max-width: 960px;
+            margin-top: 27px;
+        }
+        @include desktop {
+            max-width: 1200px;
+            margin-top: 33px;
+        }
+    }
+}
+
+

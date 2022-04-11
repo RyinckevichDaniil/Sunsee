@@ -1,0 +1,137 @@
+.jquery-modal {
+    padding: 0;
+}
+
+.modal {
+    width: 300px;
+    border-radius: 0;
+    @include mobile {
+        width: 250px;
+    }
+    @include tablet {
+        width: 480px;
+    }
+    vertical-align: top;
+    padding: 0;
+    input {
+        background: none;
+        border: none;
+        outline: none;
+    }
+}
+
+.modal a.close-modal {
+    background: none;
+    background-image: url('/src/images/modal_close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 18px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    opacity: 0.5;
+}
+
+.modal__title {
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.modal__line--top {
+    margin-bottom: 6px;
+}
+
+.bag__item-wrapp {
+    position: relative;
+    display: grid;
+    grid-template-columns: 70px 161px 30px;
+    grid-template-rows: 22px 22px 22px;
+    grid-template-areas:
+    "image image image"
+    "title size counter"
+    "delete delete delete";
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    .bag__item-wrapp__image {
+        width: 54px;
+        height: 66px;
+        grid-area: image;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+    }
+    .bag__item-wrapp__title {
+        margin: 0;
+        margin-bottom: 4px;
+        font-size: 22px;
+        grid-area: title;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .size-wrapp {
+        display: flex;
+        flex-direction: row;
+        grid-area: size;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        .bag__item-wrapp__size {
+            width: 18px;
+            font-size: 12px;
+        }
+    }
+    .bag__item-wrapp__counter-wrapp {
+        width: 56px;
+        @include mobile {
+            width: 116px;
+        }
+        display: flex;
+        flex-direction: row;
+        grid-area: counter;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border: 1px solid black;
+        .counter-number {
+            margin: 0;
+        }
+        .bag__item-wrapp_counter-wrapp__title { 
+            display: none;
+            @include mobile  {
+                display: block;
+            }
+        }
+    }
+    .bag__item-wrapp__delete-item {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 11px;
+        height: 12px;
+        grid-area: delete;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border: none;
+        background: none;
+        background-image: url('/src//images/Delete.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .counter-value {
+        margin: 0;
+        padding: 0;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,20 @@
+@font-face {
+    font-family:CormorantLight;
+    src: url('/src/fonts/Cormorant-Light.ttf');
+}
+@font-face {
+    font-family:CormorantMedium;
+    src: url('/src/fonts/Cormorant-Medium.ttf');
+}
+@font-face {
+    font-family:CormorantRegular;
+    src: url('/src/fonts/Cormorant-Regular.ttf');
+}
+@font-face {
+    font-family:NunitoLight;
+    src: url('/src/fonts/Nunito-Light.ttf');
+}
+@font-face {
+    font-family:NunitoRegular;
+    src: url('/src/fonts/Nunito-Regular.ttf');
+}

@@ -1,0 +1,24 @@
+@import '/src/elements.scss';
+
+@include mobile {
+    .product-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "image desc"
+        "secondary desc";
+        gap: 3.5%;
+    }
+}
+
+.product-grid__image {
+    grid-area: image;
+}
+
+.product-grid__description {
+    grid-area: desc;
+}
+
+.product-grid__secondary-img{
+    grid-area: secondary;
+}
